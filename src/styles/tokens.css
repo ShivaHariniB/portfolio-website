@@ -1,0 +1,47 @@
+/*
+ * Design tokens. Values are HSL channels so they can be used with alpha:
+ *   background: hsl(var(--primary) / 0.2);
+ * Light is the :root default, dark is applied through [data-theme='dark'].
+ */
+:root {
+  --background: 0 0% 96%;
+  --foreground: 0 0% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 10%;
+  --primary: 334 58% 36%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 96%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 40%;
+  --accent: 330 58% 88%;
+  --accent-foreground: 330 52% 28%;
+  --border: 0 0% 92%;
+  --ring: 260 80% 65%;
+
+  --radius: 0.5rem;
+  --shadow-card: 0 18px 50px -18px rgba(100, 100, 100, 0.3);
+  --font-sans: 'Plus Jakarta Sans Variable', 'Plus Jakarta Sans', system-ui, sans-serif;
+
+  --container: 72rem;
+  --gutter: clamp(1rem, 4vw, 2rem);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --background: 220 10% 5%;
+  --foreground: 0 0% 96%;
+  --card: 220 15% 11%;
+  --card-foreground: 0 0% 96%;
+  --primary: 334 56% 40%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 220 12% 14%;
+  --muted: 220 12% 14%;
+  --muted-foreground: 220 8% 68%;
+  --accent: 334 40% 16%;
+  --accent-foreground: 0 0% 100%;
+  --border: 220 10% 18%;
+  --ring: 334 58% 36%;
+
+  --shadow-card: 0 18px 50px -18px hsl(334 56% 40% / 0.1);
+  color-scheme: dark;
+}
