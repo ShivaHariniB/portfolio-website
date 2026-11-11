@@ -5,6 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Harini Balakumaran | Software Engineer & Data-Driven Builder</title>
+    <script>
+      // Set the theme before first paint to avoid a flash. Dark is the default.
+      try {
+        var t = localStorage.getItem('theme')
+        document.documentElement.dataset.theme = t === 'light' || t === 'dark' ? t : 'dark'
+      } catch (e) {
+        document.documentElement.dataset.theme = 'dark'
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
