@@ -1,0 +1,63 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn--md {
+  padding: 0.85rem 1.6rem;
+  font-size: 1rem;
+}
+
+.btn--sm {
+  padding: 0.5rem 1.1rem;
+  font-size: 0.875rem;
+}
+
+.btn--primary {
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  box-shadow: 0 10px 30px -12px hsl(var(--primary) / 0.6);
+}
+
+.btn--primary:hover {
+  transform: translateY(-2px);
+  background: hsl(var(--primary) / 0.9);
+}
+
+.btn--outline {
+  background: transparent;
+  color: hsl(var(--foreground));
+  border-color: hsl(var(--foreground) / 0.3);
+}
+
+.btn--outline:hover {
+  transform: translateY(-2px);
+  border-color: hsl(var(--primary));
+  color: hsl(var(--primary));
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn svg {
+  transition: transform 0.2s ease;
+}
+
+.btn:hover svg {
+  transform: translate(2px, -2px);
+}

@@ -1,4 +1,5 @@
 import { Navbar } from '@/components/layout/Navbar'
+import { Hero } from '@/components/sections/Hero'
 import { useScrollSpy } from '@/hooks/useScrollSpy'
 import { useTheme } from '@/hooks/useTheme'
 
@@ -12,11 +13,9 @@ export default function App() {
     <>
       <Navbar active={active} theme={theme} onToggleTheme={toggle} />
       <main>
-        {/* Placeholders so the navbar links and scroll highlighting work.
-            Each one is replaced by its own component in a later commit. */}
-        <section id="home" className="section container">
-          <h1>Home</h1>
-        </section>
+        <Hero />
+        {/* Placeholders for the sections still to come. Each one is replaced
+            by its own component in a later commit. */}
         <section id="work" className="section container">
           <h2>Work</h2>
         </section>
