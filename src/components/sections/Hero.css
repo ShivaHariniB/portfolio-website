@@ -1,9 +1,59 @@
 .hero {
+  position: relative;
+  overflow: hidden;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-block: 7rem 3rem;
+}
+
+.hero__dots {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__dots span {
+  position: absolute;
+  border-radius: 50%;
+  background: hsl(var(--primary) / 0.3);
+  opacity: 0;
+  /* Fade in once, then wander along the dot's own path forever. */
+  animation:
+    dot-fade 0.1s linear var(--dot-delay) forwards,
+    dot-drift var(--dot-duration) ease-in-out var(--dot-delay) infinite;
+}
+
+[data-theme='dark'] .hero__dots span {
+  background: hsl(var(--primary) / 0.4);
+}
+
+@keyframes dot-fade {
+  to {
+    opacity: var(--dot-opacity);
+  }
+}
+
+@keyframes dot-drift {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(var(--x1), var(--y1));
+  }
+  40% {
+    transform: translate(var(--x2), var(--y2));
+  }
+  60% {
+    transform: translate(var(--x3), var(--y3));
+  }
+  80% {
+    transform: translate(var(--x4), var(--y4));
+  }
 }
 
 .hero__stage {
