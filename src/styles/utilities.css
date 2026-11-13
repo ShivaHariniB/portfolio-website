@@ -1,0 +1,35 @@
+/*
+ * Shared building blocks. Reuse these instead of re-writing the same
+ * background / border / shadow / hover rules in a component's own CSS.
+ *
+ *   .surface        the look of every card-like box
+ *   .hover-outline  pink outline + glow on hover (cards, tiles, chips)
+ *   .hover-lift     small upward nudge on hover
+ *
+ * Set --surface-radius on an element to change a .surface's corner radius
+ * (the <Card> component does this through its `radius` prop).
+ */
+.surface {
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--surface-radius, var(--radius-md));
+  box-shadow: var(--shadow-card);
+}
+
+.hover-outline {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
+}
+
+.hover-outline:hover {
+  border-color: hsl(var(--primary));
+  box-shadow:
+    0 0 0 1px hsl(var(--primary)),
+    0 12px 30px -10px hsl(var(--primary) / 0.45);
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+}

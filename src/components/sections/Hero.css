@@ -63,7 +63,8 @@
 }
 
 .hero__title {
-  font-size: clamp(3rem, 10vw, 10rem);
+  /* Scales with the screen (8.24vw) up to a maximum of 8.24rem. */
+  font-size: clamp(3rem, 8.24vw, 8.24rem);
   font-weight: 900;
   line-height: 1;
   text-align: center;

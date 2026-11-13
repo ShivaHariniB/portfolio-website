@@ -1,0 +1,14 @@
+.section-heading--center {
+  text-align: center;
+}
+
+.section-heading--spaced {
+  margin-bottom: 3rem;
+}
+
+.section-heading__title {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
