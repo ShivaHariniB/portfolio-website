@@ -7,6 +7,7 @@
 }
 
 .hero__stage {
+  position: relative;
   margin: auto;
   padding-inline: var(--gutter);
 }
@@ -27,7 +28,45 @@
   color: hsl(var(--primary));
 }
 
+.hero__photo {
+  position: absolute;
+  left: 50%;
+  top: clamp(40px, 6vw, 90px);
+  transform: translateX(-50%);
+  width: clamp(220px, 32vw, 475px);
+  z-index: 2;
+  /* Head, neck and shoulders only: fade the bottom edge into the page. */
+  -webkit-mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 80%, transparent 100%);
+  animation: rise 1s ease both;
+  transition:
+    translate 0.3s ease,
+    rotate 0.3s ease,
+    scale 0.3s ease;
+}
+
+/* On hover the photo lifts, grows slightly and tilts. */
+.hero__photo:hover {
+  translate: 0 -8px;
+  rotate: -2deg;
+  scale: 1.03;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 40px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
 .hero__foot {
+  position: relative;
+  z-index: 3;
+  margin-top: clamp(190px, 18vw, 260px);
   display: flex;
   align-items: flex-end;
   justify-content: space-between;

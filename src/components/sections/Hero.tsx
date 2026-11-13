@@ -12,6 +12,7 @@ export function Hero() {
           <span>{first}</span>
           <span className="hero__title-accent">{second}</span>
         </h1>
+        <img className="hero__photo" src={site.heroPhoto} alt={site.name} />
       </div>
 
       <div className="hero__foot">

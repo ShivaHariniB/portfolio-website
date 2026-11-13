@@ -1,3 +1,5 @@
+import heroPhoto from '@/assets/images/harini-hero.png'
+
 export const site = {
   name: 'Harini Balakumaran',
   heroTitle: ['SOFTWARE', 'ENGINEER'] as const,
@@ -5,6 +7,7 @@ export const site = {
   heroText: 'I build React and Android products, now adding data, analytics and cloud at UW Foster.',
   /** Place the PDF at public/Harini_Resume.pdf */
   resume: '/Harini_Resume.pdf',
+  heroPhoto,
   nav: [
     { id: 'home', label: 'Home' },
     { id: 'work', label: 'Work' },
