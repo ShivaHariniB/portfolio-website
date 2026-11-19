@@ -1,6 +1,7 @@
 import { Navbar } from '@/components/layout/Navbar'
 import { Hero } from '@/components/sections/Hero'
 import { Tools } from '@/components/sections/Tools'
+import { Work } from '@/components/sections/Work'
 import { useScrollSpy } from '@/hooks/useScrollSpy'
 import { useTheme } from '@/hooks/useTheme'
 
@@ -16,11 +17,9 @@ export default function App() {
       <main>
         <Hero />
         <Tools />
+        <Work />
         {/* Placeholders for the sections still to come. Each one is replaced
             by its own component in a later commit. */}
-        <section id="work" className="section container">
-          <h2>Work</h2>
-        </section>
         <section id="about" className="section container">
           <h2>About</h2>
         </section>

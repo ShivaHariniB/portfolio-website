@@ -61,6 +61,12 @@ svg {
   padding-inline: var(--gutter);
 }
 
+/* Full-width variant of .container: no max width, wider side margins. */
+.container--wide {
+  max-width: none;
+  padding-inline: var(--gutter-wide);
+}
+
 .section {
   padding-block: clamp(4rem, 9vw, 7rem);
 }

@@ -8,14 +8,23 @@ interface SectionProps {
   className?: string
   /** Set to false when the content needs to run edge to edge. */
   contained?: boolean
+  /** Use the full-width container with small side margins. */
+  wide?: boolean
   children: ReactNode
 }
 
 /** Standard page section: vertical padding plus the centered container. */
-export function Section({ id, labelledBy, className, contained = true, children }: SectionProps) {
+export function Section({
+  id,
+  labelledBy,
+  className,
+  contained = true,
+  wide = false,
+  children,
+}: SectionProps) {
   return (
     <section id={id} className={cx('section', className)} aria-labelledby={labelledBy}>
-      {contained ? <div className="container">{children}</div> : children}
+      {contained ? <div className={cx('container', wide && 'container--wide')}>{children}</div> : children}
     </section>
   )
 }
