@@ -8,3 +8,10 @@ export interface Project {
   href?: string
   status: 'live' | 'soon'
 }
+
+export interface OfferCard {
+  id: string
+  title: string
+  points: string[]
+  highlight?: boolean
+}

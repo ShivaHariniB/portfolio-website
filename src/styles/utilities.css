@@ -3,6 +3,7 @@
  * background / border / shadow / hover rules in a component's own CSS.
  *
  *   .surface        the look of every card-like box
+ *   .surface--accent  the rose-tinted variant
  *   .hover-outline  pink outline + glow on hover (cards, tiles, chips)
  *   .hover-lift     small upward nudge on hover
  *
@@ -14,6 +15,11 @@
   border: 1px solid hsl(var(--border));
   border-radius: var(--surface-radius, var(--radius-md));
   box-shadow: var(--shadow-card);
+}
+
+.surface--accent {
+  background: hsl(var(--accent));
+  border-color: hsl(var(--primary) / 0.4);
 }
 
 .hover-outline {

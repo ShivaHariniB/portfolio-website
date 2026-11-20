@@ -1,15 +1,18 @@
 import { Navbar } from '@/components/layout/Navbar'
 import { Hero } from '@/components/sections/Hero'
+import { Offer } from '@/components/sections/Offer'
 import { Tools } from '@/components/sections/Tools'
 import { Work } from '@/components/sections/Work'
 import { useScrollSpy } from '@/hooks/useScrollSpy'
 import { useTheme } from '@/hooks/useTheme'
 
-const SPY_IDS = ['home', 'work', 'about', 'contact'] as const
+// "services" (What I Do) sits under the Work nav item.
+const SPY_IDS = ['home', 'work', 'services', 'about', 'contact'] as const
 
 export default function App() {
   const { theme, toggle } = useTheme()
-  const active = useScrollSpy(SPY_IDS)
+  const spied = useScrollSpy(SPY_IDS)
+  const active = spied === 'services' ? 'work' : spied
 
   return (
     <>
@@ -18,6 +21,7 @@ export default function App() {
         <Hero />
         <Tools />
         <Work />
+        <Offer />
         {/* Placeholders for the sections still to come. Each one is replaced
             by its own component in a later commit. */}
         <section id="about" className="section container">

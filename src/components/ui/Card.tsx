@@ -4,6 +4,8 @@ import { cx } from '@/utils/cx'
 interface CardProps extends HTMLAttributes<HTMLElement> {
   /** HTML element to render. Use `li` inside lists and `article` for self-contained content. */
   as?: 'div' | 'article' | 'li'
+  /** `accent` gives the rose-tinted look. */
+  tone?: 'default' | 'accent'
   /** Corner radius, from the --radius-* tokens. */
   radius?: 'sm' | 'md' | 'lg' | 'xl'
   /** Adds the pink hover outline and a small lift. */
@@ -13,6 +15,7 @@ interface CardProps extends HTMLAttributes<HTMLElement> {
 /** The one card look used across the site. Layout and spacing stay in the caller's CSS. */
 export function Card({
   as: Tag = 'div',
+  tone = 'default',
   radius = 'md',
   interactive = false,
   className,
@@ -22,7 +25,12 @@ export function Card({
 }: CardProps) {
   return (
     <Tag
-      className={cx('surface', interactive && 'hover-outline hover-lift', className)}
+      className={cx(
+        'surface',
+        tone === 'accent' && 'surface--accent',
+        interactive && 'hover-outline hover-lift',
+        className,
+      )}
       style={{ '--surface-radius': `var(--radius-${radius})`, ...style } as CSSProperties}
       {...rest}
     >
