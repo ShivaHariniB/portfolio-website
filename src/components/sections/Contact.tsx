@@ -82,7 +82,7 @@ export function Contact() {
       </Reveal>
 
       <Reveal delay={120} className="contact__side">
-        <h3 className="contact__name">{site.name}</h3>
+        <h3 className="name-heading">{site.name}</h3>
         <SocialLinks variant="list" className="contact__list">
           <li>
             <FiMapPin aria-hidden="true" />

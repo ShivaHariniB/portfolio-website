@@ -10,6 +10,7 @@
  *   .text-muted     softer body text color
  *   .text-lead      intro paragraph: larger, softer text
  *   .card-title     heading inside a card
+ *   .name-heading   large rose-colored name (Contact and Footer)
  *
  * Set --surface-radius on an element to change a .surface's corner radius
  * (the <Card> component does this through its `radius` prop).
@@ -62,4 +63,11 @@
   font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.25;
+}
+
+.name-heading {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: hsl(var(--primary));
 }

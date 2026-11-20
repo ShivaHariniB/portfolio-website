@@ -3,6 +3,8 @@ import heroPhoto from '@/assets/images/harini-hero.png'
 
 export const site = {
   name: 'Harini Balakumaran',
+  /** Full legal name, shown in the footer. */
+  fullName: 'Shiva Harini Balakumaran',
   firstName: 'Harini',
   email: 'hariniavish@gmail.com',
   location: 'Seattle, WA',

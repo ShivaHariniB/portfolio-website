@@ -1,0 +1,66 @@
+.footer {
+  border-top: 1px solid hsl(var(--border));
+  padding-block: clamp(3rem, 7vw, 4.5rem) 2.5rem;
+}
+
+.footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.75rem;
+  margin-top: 1.5rem;
+  font-size: 1.0625rem;
+  font-weight: 500;
+}
+
+.footer__nav a,
+.footer__mail {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__nav a:hover,
+.footer__mail:hover {
+  color: hsl(var(--primary));
+}
+
+/* The button and social icons are shared components; this only places them. */
+.footer__actions {
+  display: grid;
+  gap: 1.5rem;
+  justify-items: end;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 2rem;
+  margin-top: clamp(2rem, 5vw, 3rem);
+  padding-top: 1.75rem;
+  border-top: 1px solid hsl(var(--border));
+  font-size: 0.9375rem;
+}
+
+.footer__copy {
+  color: hsl(var(--muted-foreground));
+}
+
+.footer__credit {
+  font-weight: 600;
+  color: hsl(var(--primary));
+}
+
+@media (max-width: 640px) {
+  .footer__actions {
+    justify-items: start;
+  }
+}
