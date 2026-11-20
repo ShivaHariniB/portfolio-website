@@ -1,4 +1,30 @@
-import type { OfferCard } from '@/types'
+import type { OfferCard, SkillGroup } from '@/types'
+
+export const skillGroups: SkillGroup[] = [
+  {
+    title: 'Engineering',
+    reveal: 'ttb',
+    items: ['JavaScript', 'TypeScript', 'React', 'Java', 'Kotlin', 'Cordova', 'HTML5 / CSS3', 'REST APIs'],
+  },
+  {
+    title: 'Data & Analytics',
+    reveal: 'ltr',
+    items: ['SQL (MySQL)', 'Python', 'Jupyter', 'Generative AI workflows', 'Statistical modeling'],
+  },
+  {
+    title: 'Cloud & Tools',
+    reveal: 'ttb',
+    items: [
+      'AWS (learning)',
+      'Jenkins CI/CD',
+      'Git',
+      'Postman',
+      'Android Studio',
+      'VS Code',
+      'IntelliJ IDEA',
+    ],
+  },
+]
 
 export const offers: OfferCard[] = [
   {

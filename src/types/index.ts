@@ -17,6 +17,17 @@ export interface TimelineEntry {
   points: string[]
 }
 
+export interface SkillGroup {
+  title: string
+  items: string[]
+  /**
+   * How the chips appear on scroll:
+   * `ltr` reveals each chip's text from left to right,
+   * `ttb` drops each chip's text in from the top.
+   */
+  reveal: 'ltr' | 'ttb'
+}
+
 export interface OfferCard {
   id: string
   title: string

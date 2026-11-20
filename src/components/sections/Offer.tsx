@@ -31,7 +31,7 @@ export function Offer() {
               tone={offer.highlight ? 'accent' : 'default'}
               className="offer-card"
             >
-              <h3 className="offer-card__title">{offer.title}</h3>
+              <h3 className="card-title">{offer.title}</h3>
               <ul className="offer-card__points">
                 {offer.points.map((point) => (
                   <li key={point}>

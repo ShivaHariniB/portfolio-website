@@ -123,7 +123,7 @@
   justify-content: space-between;
   gap: 1.5rem;
   width: 100%;
-  /* Full width with small side margins, like the other wide sections. */
+  /* Full width with small side margins, like the other sections. */
   padding-inline: var(--gutter-wide);
 }
 

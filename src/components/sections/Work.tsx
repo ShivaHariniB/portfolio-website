@@ -8,7 +8,7 @@ import './Work.css'
 
 export function Work() {
   return (
-    <Section id="work" labelledBy="work-title" wide>
+    <Section id="work" labelledBy="work-title">
       <SectionHeading
         id="work-title"
         title="Latest Work"
@@ -30,7 +30,7 @@ export function Work() {
                 </div>
                 <div className="work-card__body">
                   <div>
-                    <h3 className="work-card__title">{project.title}</h3>
+                    <h3 className="card-title">{project.title}</h3>
                     <p className="work-card__sub">{project.subtitle}</p>
                   </div>
                   {project.status === 'live' && project.href && (

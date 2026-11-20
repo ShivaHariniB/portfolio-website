@@ -1,4 +1,5 @@
 import { FiMoon, FiSun } from 'react-icons/fi'
+import { Button } from '@/components/ui/Button'
 import { site } from '@/data/site'
 import type { Theme } from '@/hooks/useTheme'
 import './Navbar.css'
@@ -36,9 +37,9 @@ export function Navbar({ active, theme, onToggleTheme }: NavbarProps) {
             </li>
           ))}
         </ul>
-        <a href="#contact" className="navbar__cta">
+        <Button href="#contact" size="sm">
           Contact
-        </a>
+        </Button>
       </nav>
     </header>
   )

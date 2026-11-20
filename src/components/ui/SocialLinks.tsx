@@ -20,7 +20,7 @@ export function SocialLinks({ variant = 'icons', className, children }: SocialLi
           <li key={id}>
             {variant === 'icons' ? (
               <a
-                className="social__icon surface hover-outline hover-lift"
+                className="social__icon surface surface--flat hover-outline hover-lift"
                 href={href}
                 aria-label={label}
                 {...linkProps}

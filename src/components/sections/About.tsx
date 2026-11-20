@@ -17,7 +17,7 @@ const STATS = [
 export function About() {
   return (
     <Section id="about" labelledBy="about-title" className="about" contained={false}>
-      <div className="container container--wide about__top">
+      <div className="container about__top">
         <Reveal>
           <SectionHeading
             id="about-title"
@@ -59,7 +59,7 @@ export function About() {
       </div>
 
       <div className="about__band">
-        <div className="container container--wide about__columns">
+        <div className="container about__columns">
           <Reveal>
             <h3 className="about__h3">Experience</h3>
             <Timeline entries={experience} />

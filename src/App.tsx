@@ -2,6 +2,7 @@ import { Navbar } from '@/components/layout/Navbar'
 import { About } from '@/components/sections/About'
 import { Hero } from '@/components/sections/Hero'
 import { Offer } from '@/components/sections/Offer'
+import { Skills } from '@/components/sections/Skills'
 import { Tools } from '@/components/sections/Tools'
 import { Work } from '@/components/sections/Work'
 import { useScrollSpy } from '@/hooks/useScrollSpy'
@@ -24,6 +25,7 @@ export default function App() {
         <Work />
         <Offer />
         <About />
+        <Skills />
         {/* Placeholder for the section still to come. It is replaced by its
             own component in a later commit. */}
         <section id="contact" className="section container">

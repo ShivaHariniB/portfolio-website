@@ -4,10 +4,12 @@
  *
  *   .surface        the look of every card-like box
  *   .surface--accent  the rose-tinted variant
+ *   .surface--flat  no resting shadow (small chips and icon buttons)
  *   .hover-outline  pink outline + glow on hover (cards, tiles, chips)
  *   .hover-lift     small upward nudge on hover
  *   .text-muted     softer body text color
  *   .text-lead      intro paragraph: larger, softer text
+ *   .card-title     heading inside a card
  *
  * Set --surface-radius on an element to change a .surface's corner radius
  * (the <Card> component does this through its `radius` prop).
@@ -22,6 +24,10 @@
 .surface--accent {
   background: hsl(var(--accent));
   border-color: hsl(var(--primary) / 0.4);
+}
+
+.surface--flat {
+  box-shadow: none;
 }
 
 .hover-outline {
@@ -50,4 +56,10 @@
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: hsl(var(--foreground) / 0.7);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.25;
 }

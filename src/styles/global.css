@@ -54,16 +54,9 @@ svg {
   max-width: 100%;
 }
 
+/* Every section's content: full width with the same side margins. */
 .container {
   width: 100%;
-  max-width: var(--container);
-  margin-inline: auto;
-  padding-inline: var(--gutter);
-}
-
-/* Full-width variant of .container: no max width, wider side margins. */
-.container--wide {
-  max-width: none;
   padding-inline: var(--gutter-wide);
 }
 

@@ -1,0 +1,74 @@
+/* One column on phones and tablets, three on larger screens. */
+.skills__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .skills__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+/* Surface comes from <Card>. */
+.skills__group {
+  height: 100%;
+  padding: 1.75rem;
+}
+
+.skills__group-title {
+  margin-bottom: 1.1rem;
+}
+
+.skills__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* Surface and the pink hover outline come from <Card> and .hover-outline. */
+.skills__chip {
+  overflow: hidden;
+  padding: 0.55rem 1rem;
+  background: hsl(var(--secondary));
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.skills__chip span {
+  display: block;
+  transition-property: clip-path, transform, opacity;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  /* Each chip starts a little after the one before it. */
+  transition-delay: calc(var(--n) * 70ms);
+}
+
+/* Left to right: the text is wiped in from the left edge. */
+.skills__chips--ltr .skills__chip span {
+  clip-path: inset(0 100% 0 0);
+}
+
+/* Top to bottom: the text drops in from above. */
+.skills__chips--ttb .skills__chip span {
+  transform: translateY(-120%);
+  opacity: 0;
+}
+
+.reveal--visible .skills__chips--ltr .skills__chip span {
+  clip-path: inset(0 0 0 0);
+}
+
+.reveal--visible .skills__chips--ttb .skills__chip span {
+  transform: none;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skills__chip span {
+    clip-path: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
