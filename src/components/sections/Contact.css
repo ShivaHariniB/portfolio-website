@@ -1,0 +1,80 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.contact__form {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  max-width: 32rem;
+}
+
+.contact__form label {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Background, border and corners come from the shared .surface class. */
+.contact__form input,
+.contact__form textarea {
+  --surface-radius: var(--radius);
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font: inherit;
+  color: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.contact__form textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.contact__form input:focus,
+.contact__form textarea:focus {
+  outline: none;
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 3px hsl(var(--primary) / 0.25);
+}
+
+.contact__form .btn {
+  margin-top: 1rem;
+  justify-self: start;
+}
+
+.contact__status {
+  min-height: 1.5rem;
+  font-size: 0.9375rem;
+}
+
+.contact__side {
+  padding-top: 0.5rem;
+}
+
+.contact__name {
+  font-size: clamp(1.75rem, 4vw, 3rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: hsl(var(--primary));
+}
+
+/* The list itself is styled by <SocialLinks variant="list">. */
+.contact__list {
+  margin-top: 2rem;
+}
+
+.contact__note {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 860px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}

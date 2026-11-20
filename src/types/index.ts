@@ -34,3 +34,9 @@ export interface OfferCard {
   points: string[]
   highlight?: boolean
 }
+
+export interface ContactPayload {
+  name: string
+  email: string
+  message: string
+}

@@ -5,6 +5,7 @@ export const site = {
   name: 'Harini Balakumaran',
   firstName: 'Harini',
   email: 'hariniavish@gmail.com',
+  location: 'Seattle, WA',
   linkedin: 'https://www.linkedin.com/in/shiva-harini-balakumaran-605ba2171/',
   github: 'https://github.com/ShivaHariniB',
   heroTitle: ['SOFTWARE', 'ENGINEER'] as const,
