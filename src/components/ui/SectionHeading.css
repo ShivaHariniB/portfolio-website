@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.section-heading--accent .section-heading__title {
+  color: hsl(var(--primary));
+}
+
 .section-heading--spaced {
   margin-bottom: 3rem;
 }
@@ -16,9 +20,6 @@
 .section-heading__lead {
   margin-top: 1rem;
   max-width: 34rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  color: hsl(var(--foreground) / 0.7);
 }
 
 .section-heading--center .section-heading__lead {

@@ -74,7 +74,7 @@ export function Hero() {
       <div className="hero__foot">
         <div className="hero__intro">
           <p className="hero__lead">{site.heroLead}</p>
-          <p className="hero__text">{site.heroText}</p>
+          <p className="text-muted">{site.heroText}</p>
           <p className="hero__name">{site.name}</p>
         </div>
         <div className="hero__actions">

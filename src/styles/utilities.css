@@ -6,6 +6,8 @@
  *   .surface--accent  the rose-tinted variant
  *   .hover-outline  pink outline + glow on hover (cards, tiles, chips)
  *   .hover-lift     small upward nudge on hover
+ *   .text-muted     softer body text color
+ *   .text-lead      intro paragraph: larger, softer text
  *
  * Set --surface-radius on an element to change a .surface's corner radius
  * (the <Card> component does this through its `radius` prop).
@@ -38,4 +40,14 @@
 
 .hover-lift:hover {
   transform: translateY(-3px);
+}
+
+.text-muted {
+  color: hsl(var(--foreground) / 0.7);
+}
+
+.text-lead {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: hsl(var(--foreground) / 0.7);
 }

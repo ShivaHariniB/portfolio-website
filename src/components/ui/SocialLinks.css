@@ -1,0 +1,39 @@
+.social--icons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.social__icon {
+  --surface-radius: 50%;
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  box-shadow: none;
+}
+
+.social--list {
+  display: grid;
+  gap: 1rem;
+  font-size: 1.0625rem;
+}
+
+.social--list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.social--list svg {
+  flex: none;
+  color: hsl(var(--primary));
+}
+
+.social--list a {
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.social--list a:hover {
+  color: hsl(var(--primary));
+}

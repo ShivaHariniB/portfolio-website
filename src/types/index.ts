@@ -9,6 +9,14 @@ export interface Project {
   status: 'live' | 'soon'
 }
 
+export interface TimelineEntry {
+  id: string
+  period: string
+  title: string
+  org: string
+  points: string[]
+}
+
 export interface OfferCard {
   id: string
   title: string

@@ -9,6 +9,8 @@ interface SectionHeadingProps {
   title: ReactNode
   lead?: ReactNode
   align?: 'center' | 'start'
+  /** Rose-colored title. */
+  accent?: boolean
   /** Adds space below, for headings that sit above a grid. */
   spaced?: boolean
   /** Fade in on scroll. Turn off when the caller already wraps it in <Reveal>. */
@@ -20,15 +22,23 @@ export function SectionHeading({
   title,
   lead,
   align = 'center',
+  accent = false,
   spaced = false,
   reveal = true,
 }: SectionHeadingProps) {
   const heading = (
-    <div className={cx('section-heading', `section-heading--${align}`, spaced && 'section-heading--spaced')}>
+    <div
+      className={cx(
+        'section-heading',
+        `section-heading--${align}`,
+        accent && 'section-heading--accent',
+        spaced && 'section-heading--spaced',
+      )}
+    >
       <h2 id={id} className="section-heading__title">
         {title}
       </h2>
-      {lead && <p className="section-heading__lead">{lead}</p>}
+      {lead && <p className="section-heading__lead text-lead">{lead}</p>}
     </div>
   )
 

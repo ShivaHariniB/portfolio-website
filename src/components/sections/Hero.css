@@ -138,10 +138,6 @@
   color: hsl(var(--foreground) / 0.85);
 }
 
-.hero__text {
-  color: hsl(var(--foreground) / 0.7);
-}
-
 .hero__name {
   margin-top: 0.5rem;
   font-weight: 700;

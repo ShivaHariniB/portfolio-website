@@ -1,4 +1,5 @@
 import { Navbar } from '@/components/layout/Navbar'
+import { About } from '@/components/sections/About'
 import { Hero } from '@/components/sections/Hero'
 import { Offer } from '@/components/sections/Offer'
 import { Tools } from '@/components/sections/Tools'
@@ -22,11 +23,9 @@ export default function App() {
         <Tools />
         <Work />
         <Offer />
-        {/* Placeholders for the sections still to come. Each one is replaced
-            by its own component in a later commit. */}
-        <section id="about" className="section container">
-          <h2>About</h2>
-        </section>
+        <About />
+        {/* Placeholder for the section still to come. It is replaced by its
+            own component in a later commit. */}
         <section id="contact" className="section container">
           <h2>Contact</h2>
         </section>
