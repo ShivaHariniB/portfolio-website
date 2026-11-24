@@ -156,4 +156,14 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  /* Stack the buttons at the same full width so they line up. */
+  .hero__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+  }
 }
